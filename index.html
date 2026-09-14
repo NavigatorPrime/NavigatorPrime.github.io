@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrical Engineering Portfolio — Control Systems, Embedded Design &amp; Autonomous Robotics</title>
+  <meta name="description" content="Electrical engineering undergraduate portfolio specializing in real-time control systems, embedded C/C++ firmware, autonomous robotics, industrial IoT, and signal conditioning. Proven track record in IEEE competitions and national-level robotics finals.">
+  <link rel="stylesheet" href="index.css?v=2">
+</head>
+<body>
+
+  <!-- ======================== NAVBAR ======================== -->
+  <nav class="navbar" id="navbar">
+    <div class="wrap">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>
+        <span>EE.FOLIO</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="btn btn-ghost">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Bus Rule Divider -->
+  <div class="bus-rule"><span class="bus-rule-center"></span></div>
+
+
+  <!-- ======================== HERO ======================== -->
+  <section class="hero" id="hero">
+    <div class="hero-particles" id="hero-particles">
+      <canvas id="particle-canvas"></canvas>
+    </div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow">EE-UG // CONTROL SYSTEMS &amp; AUTOMATION</span>
+          <div class="name-glitch-container">
+            <span class="name-greeting">Hi, I'm</span><br/>
+            <span class="name-glitch" data-text="Inuka Jithmal">Inuka Jithmal</span>
+          </div>
+          <h1>Engineering systems from <span class="amber">signal</span> to software.</h1>
+          <p class="lede">EE undergraduate building real-time control, embedded firmware, and autonomous robotics that run in continuous operation.</p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+            <a href="CV.pdf" class="btn btn-ghost" download>Download CV</a>
+          </div>
+        </div>
+
+        <!-- Oscilloscope Panel -->
+        <div class="scope-panel" id="scope-panel">
+          <div class="scope-header">
+            <span class="scope-channel">CH1 — CONTROL OUTPUT</span>
+            <div class="scope-leds">
+              <span class="led" id="led-1"></span>
+              <span class="led" id="led-2"></span>
+              <span class="led" id="led-3"></span>
+              <span class="led" id="led-4"></span>
+            </div>
+          </div>
+          <div class="scope-display">
+            <div class="scope-grid-line"></div>
+            <div class="scope-grid-line"></div>
+            <div class="scope-grid-line"></div>
+            <svg class="scope-svg" viewBox="0 0 500 140" preserveAspectRatio="none" id="scope-svg">
+              <path class="scope-trace" id="scope-trace" d="" />
+            </svg>
+          </div>
+          <div class="scope-footer">
+            <span class="scope-readout"><span>3.3V</span> pp &nbsp;|&nbsp; <span>60Hz</span></span>
+            <span class="scope-status" id="scope-status">STANDBY</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== ABOUT ======================== -->
+  <section id="about">
+    <div class="wrap">
+      <h2><span class="section-ref">02</span>About</h2>
+      <div class="about-grid">
+        <!-- Photo Panel -->
+        <div class="photo-panel" id="photo-panel">
+          <span class="bolt bolt-tl"></span>
+          <span class="bolt bolt-tr"></span>
+          <img id="photo-preview" class="loaded" src="profile.jpg" alt="Profile photo" style="display: block;">
+        </div>
+
+        <!-- Bio + Spec Sheet -->
+        <div class="bio">
+          <p>Detail-oriented electrical engineering undergraduate with demonstrated ability to design, build, and debug complete control systems — from analog signal conditioning through embedded firmware to cloud-connected telemetry. Every project below shipped as a working prototype, tested under real operating conditions.</p>
+          <p>Core competency spans both hardware and software: equally comfortable tuning an LM358 op-amp gain stage as writing a PID loop in Embedded C or scripting a data pipeline in Python. Proven under competition pressure with an IEEE Top-10 finish and a national robotics final.</p>
+
+          <dl class="spec-sheet">
+            <div class="spec-row">
+              <dt class="spec-key">FOCUS</dt>
+              <dd class="spec-val">Control Systems, Embedded Design, Industrial IoT</dd>
+            </div>
+            <div class="spec-row">
+              <dt class="spec-key">LANGUAGES</dt>
+              <dd class="spec-val">Embedded C/C++, Python, LabVIEW, MATLAB</dd>
+            </div>
+            <div class="spec-row">
+              <dt class="spec-key">PLATFORMS</dt>
+              <dd class="spec-val">Arduino, STM32, Raspberry Pi, Webots, NI DAQ</dd>
+            </div>
+            <div class="spec-row">
+              <dt class="spec-key">PROTOCOLS</dt>
+              <dd class="spec-val">I2C, SPI, UART, MQTT, AT Commands, EtherNet/IP</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== PROJECTS ======================== -->
+  <section id="projects">
+    <div class="wrap">
+      <h2><span class="section-ref">03</span>Projects</h2>
+      <div class="project-grid">
+
+        <!-- 1. Alga-Bot -->
+        <div class="project-card" tabindex="0">
+          <h3><svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v5a3 3 0 0 1 3 3v1a6 6 0 0 1-12 0v-1a3 3 0 0 1 3-3V3z"/><line x1="9" y1="3" x2="15" y2="3"/><path d="M12 18v3"/><path d="M8 21h8"/></svg>Alga-Bot — Intelligent Photobioreactor</h3>
+          <p class="project-desc">End-to-end bioreactor control system with custom LM358 op-amp signal conditioning for LDR voltage dividers, LabVIEW DAQ integration for real-time telemetry at 10 Hz sampling, and dual-spectrum LED control loops maintaining ±2% light intensity tolerance across a 14-hour growth cycle.</p>
+          <div class="project-tags">
+            <span class="tag">LabVIEW</span>
+            <span class="tag">LM358 Op-Amp</span>
+            <span class="tag">Signal Conditioning</span>
+            <span class="tag">NI DAQ</span>
+            <span class="tag">PID Control</span>
+          </div>
+          <div class="project-meta">
+            <span>2025</span>
+            <span>·</span>
+            <span>Control Systems</span>
+          </div>
+        </div>
+
+        <!-- 2. Rice Saver -->
+        <div class="project-card" tabindex="0">
+          <h3><svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Rice Saver — IEEE Arduino Challenge Top 10</h3>
+          <p class="project-desc">Automated environmental monitoring and response system for autonomous grain storage protection. Implemented thermal control logic with hysteresis deadband, I2C real-time diagnostic interface, and multi-sensor fusion (PIR motion detection, DHT22 climate sensing) — all within strict IEEE competition hardware and code-size constraints.</p>
+          <div class="project-tags">
+            <span class="tag">Arduino</span>
+            <span class="tag">I2C</span>
+            <span class="tag">PIR</span>
+            <span class="tag">DHT22</span>
+            <span class="tag">Thermal Control</span>
+          </div>
+          <div class="project-meta">
+            <span>2024</span>
+            <span>·</span>
+            <span>Embedded Systems</span>
+          </div>
+        </div>
+
+        <!-- 3. PeraBots 25 -->
+        <div class="project-card" tabindex="0">
+          <h3><svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>PeraBots 25 — Autonomous Robot</h3>
+          <p class="project-desc">Autonomous navigation platform achieving 95% collision-free traversal via LIDAR-based dynamic obstacle avoidance. Developed real-time sensor feedback interpretation and path-optimization algorithms in Webots (C++), with PID-tuned differential drive control. Competed to national-level finalist standing.</p>
+          <div class="project-tags">
+            <span class="tag">LIDAR</span>
+            <span class="tag">Webots</span>
+            <span class="tag">Path Planning</span>
+            <span class="tag">C++</span>
+            <span class="tag">PID</span>
+          </div>
+          <div class="project-meta">
+            <span>2025</span>
+            <span>·</span>
+            <span>Autonomous Navigation</span>
+          </div>
+        </div>
+
+        <!-- 4. Smart IoT Bicycle Lock -->
+        <div class="project-card" tabindex="0">
+          <h3><svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>Smart IoT Bicycle Lock</h3>
+          <p class="project-desc">Remote telemetry and IoT device management system with GPS geofencing logic and ADXL345 accelerometer-based motion/tamper sensing. Diagnosed raw AT command instability on SIM800L, replaced with TinyGSM abstraction layer for stable cellular uplink — achieving 99.2% transmission reliability over GSM/GPRS.</p>
+          <div class="project-tags">
+            <span class="tag">TinyGSM</span>
+            <span class="tag">ADXL345</span>
+            <span class="tag">Geofencing</span>
+            <span class="tag">SIM800L</span>
+            <span class="tag">MQTT</span>
+          </div>
+          <div class="project-meta">
+            <span>2024</span>
+            <span>·</span>
+            <span>IoT &amp; Telemetry</span>
+          </div>
+        </div>
+
+        <!-- 5. Custom Python Engine -->
+        <div class="project-card" tabindex="0">
+          <h3><svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>Custom Python Engine — Racing Game</h3>
+          <p class="project-desc">Real-time game engine built entirely from scratch in Python, validating core software fundamentals. Implemented custom event handling, frame-rate-independent state management, sprite-level collision detection, and dynamic difficulty scaling — zero external game frameworks, pure algorithmic design.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pygame</span>
+            <span class="tag">State Machine</span>
+            <span class="tag">Event Loop</span>
+            <span class="tag">OOP</span>
+          </div>
+          <div class="project-meta">
+            <span>2024</span>
+            <span>·</span>
+            <span>Software Engineering</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== SKILLS ======================== -->
+  <section id="skills">
+    <div class="wrap">
+      <h2><span class="section-ref">04</span>Skills</h2>
+      <div class="skill-grid">
+
+        <div class="skill-gauge" data-percent="90">
+          <svg class="gauge-ring" viewBox="0 0 120 120">
+            <circle class="gauge-track" cx="60" cy="60" r="50" />
+            <circle class="gauge-fill" cx="60" cy="60" r="50" />
+          </svg>
+          <div class="gauge-label">
+            <span class="name">Control Systems</span>
+            <span class="pct">90%</span>
+          </div>
+        </div>
+
+        <div class="skill-gauge" data-percent="88">
+          <svg class="gauge-ring" viewBox="0 0 120 120">
+            <circle class="gauge-track" cx="60" cy="60" r="50" />
+            <circle class="gauge-fill" cx="60" cy="60" r="50" />
+          </svg>
+          <div class="gauge-label">
+            <span class="name">Embedded C/C++</span>
+            <span class="pct">88%</span>
+          </div>
+        </div>
+
+        <div class="skill-gauge" data-percent="86">
+          <svg class="gauge-ring" viewBox="0 0 120 120">
+            <circle class="gauge-track" cx="60" cy="60" r="50" />
+            <circle class="gauge-fill" cx="60" cy="60" r="50" />
+          </svg>
+          <div class="gauge-label">
+            <span class="name">Signal Conditioning</span>
+            <span class="pct">86%</span>
+          </div>
+        </div>
+
+        <div class="skill-gauge" data-percent="85">
+          <svg class="gauge-ring" viewBox="0 0 120 120">
+            <circle class="gauge-track" cx="60" cy="60" r="50" />
+            <circle class="gauge-fill" cx="60" cy="60" r="50" />
+          </svg>
+          <div class="gauge-label">
+            <span class="name">Python Programming</span>
+            <span class="pct">85%</span>
+          </div>
+        </div>
+
+        <div class="skill-gauge" data-percent="84">
+          <svg class="gauge-ring" viewBox="0 0 120 120">
+            <circle class="gauge-track" cx="60" cy="60" r="50" />
+            <circle class="gauge-fill" cx="60" cy="60" r="50" />
+          </svg>
+          <div class="gauge-label">
+            <span class="name">IoT & Telemetry</span>
+            <span class="pct">84%</span>
+          </div>
+        </div>
+
+        <div class="skill-gauge" data-percent="82">
+          <svg class="gauge-ring" viewBox="0 0 120 120">
+            <circle class="gauge-track" cx="60" cy="60" r="50" />
+            <circle class="gauge-fill" cx="60" cy="60" r="50" />
+          </svg>
+          <div class="gauge-label">
+            <span class="name">Real-Time Telemetry</span>
+            <span class="pct">82%</span>
+          </div>
+        </div>
+
+        <div class="skill-gauge" data-percent="80">
+          <svg class="gauge-ring" viewBox="0 0 120 120">
+            <circle class="gauge-track" cx="60" cy="60" r="50" />
+            <circle class="gauge-fill" cx="60" cy="60" r="50" />
+          </svg>
+          <div class="gauge-label">
+            <span class="name">Complex Troubleshooting</span>
+            <span class="pct">80%</span>
+          </div>
+        </div>
+
+        <div class="skill-gauge" data-percent="78">
+          <svg class="gauge-ring" viewBox="0 0 120 120">
+            <circle class="gauge-track" cx="60" cy="60" r="50" />
+            <circle class="gauge-fill" cx="60" cy="60" r="50" />
+          </svg>
+          <div class="gauge-label">
+            <span class="name">Autonomous Navigation</span>
+            <span class="pct">78%</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== ACHIEVEMENTS ======================== -->
+  <section id="achievements">
+    <div class="wrap">
+      <h2><span class="section-ref">05</span>Achievements</h2>
+      <div class="marquee-container" id="achievement-marquee">
+        <div class="marquee-track">
+          <!-- Set 1 -->
+          <div class="marquee-set">
+            <a href="projects/rice-saver.html" class="marquee-card" data-project="rice-saver">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                <div class="marquee-text">IEEE Arduino Challenge — Top 10</div>
+              </div>
+            </a>
+            <a href="projects/perabots.html" class="marquee-card" data-project="perabots">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <div class="marquee-text">PeraBots 25 — National Finalist</div>
+              </div>
+            </a>
+            <a href="projects/algabot.html" class="marquee-card" data-project="algabot">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v2M15 3v2M3 8h18M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><circle cx="12" cy="15" r="4"/></svg>
+                <div class="marquee-text">Alga-Bot Photobioreactor Demo</div>
+              </div>
+            </a>
+            <a href="projects/iot-lock.html" class="marquee-card" data-project="iot-lock">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <div class="marquee-text">IoT Bicycle Lock — Field Test</div>
+              </div>
+            </a>
+            <a href="projects/racing-engine.html" class="marquee-card" data-project="racing-engine">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                <div class="marquee-text">Python Racing Engine Demo</div>
+              </div>
+            </a>
+            <a href="projects/raven.html" class="marquee-card" data-project="raven">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <div class="marquee-text">ROBOFEST 2025 — Finalist</div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Set 2 (for seamless looping) -->
+          <div class="marquee-set">
+            <a href="projects/rice-saver.html" class="marquee-card" data-project="rice-saver">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                <div class="marquee-text">IEEE Arduino Challenge — Top 10</div>
+              </div>
+            </a>
+            <a href="projects/perabots.html" class="marquee-card" data-project="perabots">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <div class="marquee-text">PeraBots 25 — National Finalist</div>
+              </div>
+            </a>
+            <a href="projects/algabot.html" class="marquee-card" data-project="algabot">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v2M15 3v2M3 8h18M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><circle cx="12" cy="15" r="4"/></svg>
+                <div class="marquee-text">Alga-Bot Photobioreactor Demo</div>
+              </div>
+            </a>
+            <a href="projects/iot-lock.html" class="marquee-card" data-project="iot-lock">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <div class="marquee-text">IoT Bicycle Lock — Field Test</div>
+              </div>
+            </a>
+            <a href="projects/racing-engine.html" class="marquee-card" data-project="racing-engine">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                <div class="marquee-text">Python Racing Engine Demo</div>
+              </div>
+            </a>
+            <a href="projects/raven.html" class="marquee-card" data-project="raven">
+              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <div class="marquee-text">ROBOFEST 2025 — Finalist</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== EXPERIENCE ======================== -->
+  <section id="experience">
+    <div class="wrap">
+      <h2><span class="section-ref">06</span>Experience</h2>
+      <div class="timeline" id="timeline">
+        <div class="timeline-wire">
+          <div class="timeline-current" id="timeline-current"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-role">Co-Chair — EESpire'26 Career Fair</div>
+          <div class="timeline-org">Electrical Engineering Society</div>
+          <div class="timeline-date">2026</div>
+          <p class="timeline-desc">Led the organization and execution of EESpire'26, managing corporate relations, event logistics, and team coordination to connect engineering undergraduates with industry leaders.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-role">Program Lead — RoboRoarz 2026</div>
+          <div class="timeline-org">IEEE Student Branch</div>
+          <div class="timeline-date">2026</div>
+          <p class="timeline-desc">Directed the competition structure and technical challenges for RoboRoarz 2026. Coordinated with teams, managed event schedules, and ensured the smooth execution of a high-stakes robotics competition.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-role">PeraBots 25 — National Finalist</div>
+          <div class="timeline-org">University Robotics Team</div>
+          <div class="timeline-date">2025</div>
+          <p class="timeline-desc">Designed and programmed an autonomous robot with LIDAR-based obstacle avoidance and PID-tuned differential drive. Developed path-optimization algorithms in Webots (C++), achieving 95% collision-free traversal in competition arena trials.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-role">IEEE Arduino Challenge — Top 10</div>
+          <div class="timeline-org">IEEE Sri Lanka Section</div>
+          <div class="timeline-date">2024</div>
+          <p class="timeline-desc">Built the "Rice Saver" automated environmental monitoring system under strict competition constraints. Implemented thermal control logic with hysteresis deadband and I2C diagnostic interface, competing against 100+ national entries.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-role">Undergraduate Researcher — Control Systems</div>
+          <div class="timeline-org">Dept. of Electrical Engineering</div>
+          <div class="timeline-date">2023 — Present</div>
+          <p class="timeline-desc">Designed the Alga-Bot photobioreactor control system: custom LM358 signal conditioning circuits, LabVIEW DAQ integration for 10 Hz real-time telemetry, and dual-spectrum LED control loops. Independently debugged analog-to-digital signal integrity issues across the full signal chain.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-role">B.Sc. Engineering — Electrical &amp; Electronic</div>
+          <div class="timeline-org">University of Peradeniya</div>
+          <div class="timeline-date">2021 — Present</div>
+          <p class="timeline-desc">Core coursework in power electronics, digital signal processing, control theory, and microprocessor systems. Continuous integration of theoretical foundations with hands-on prototype development across five engineering projects.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== CONTACT ======================== -->
+  <section id="contact">
+    <div class="wrap">
+      <h2><span class="section-ref">07</span>Contact</h2>
+      <div class="terminal-block">
+        <a href="mailto:pgijithmal@gmail.com" class="terminal-cell">
+          <span class="terminal-label" style="display: flex; align-items: center; gap: 8px;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#EA4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>EMAIL</span>
+          <span class="terminal-value">pgijithmal@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/inuka-jithmal-278152335" target="_blank" rel="noopener" class="terminal-cell">
+          <span class="terminal-label" style="display: flex; align-items: center; gap: 8px;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0A66C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>LINKEDIN</span>
+          <span class="terminal-value">linkedin.com/in/inuka-jithmal-278152335</span>
+        </a>
+        <a href="https://github.com/NavigatorPrime" target="_blank" rel="noopener" class="terminal-cell">
+          <span class="terminal-label" style="display: flex; align-items: center; gap: 8px;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>GITHUB</span>
+          <span class="terminal-value">github.com/NavigatorPrime</span>
+        </a>
+        <a href="tel:0713270648" class="terminal-cell">
+          <span class="terminal-label" style="display: flex; align-items: center; gap: 8px;"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#34A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>PHONE</span>
+          <span class="terminal-value">0713270648</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <p>&copy; 2025 EE Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <!-- Robot Mascot -->
+  <div id="robot-mascot">
+    <img src="anime_robot_transparent.png" alt="Waving Robot" />
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
