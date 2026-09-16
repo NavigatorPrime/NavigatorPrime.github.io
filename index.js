@@ -318,9 +318,31 @@
     initTimeline();
     initPhotoUpload();
     initSmoothScroll();
+    initMarqueeScroll();
     if (!prefersReducedMotion) initParticles();
   });
 
+  // ============================
+  // MARQUEE: Manual Scrolling
+  // ============================
+
+  function initMarqueeScroll() {
+    const container = document.getElementById('achievement-marquee');
+    const leftBtn = document.getElementById('marquee-left');
+    const rightBtn = document.getElementById('marquee-right');
+    if (!container || !leftBtn || !rightBtn) return;
+
+    // Scroll by approximately one card width + gap (340 + 24 = 364)
+    const scrollAmount = 364;
+
+    leftBtn.addEventListener('click', () => {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    rightBtn.addEventListener('click', () => {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  }
 
   // ============================
   // HERO: Floating Particle System

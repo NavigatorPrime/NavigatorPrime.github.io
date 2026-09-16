@@ -801,23 +801,64 @@ p {
 /* ====================
    ACHIEVEMENTS
    ==================== */
+.marquee-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 56px; /* space for the arrow buttons on each side */
+}
+
 .marquee-container {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
   position: relative;
   width: 100%;
   padding: 10px 0;
-  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  /* hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.marquee-container::-webkit-scrollbar {
+  display: none;
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: scrollMarquee 35s linear infinite;
 }
 
-.marquee-container:hover .marquee-track {
-  animation-play-state: paused;
+.marquee-nav-btn {
+  background: var(--navy-800);
+  border: 1px solid var(--amber);
+  color: var(--amber);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+.marquee-nav-btn:hover {
+  background: var(--amber);
+  color: var(--navy-950);
+  box-shadow: 0 0 16px rgba(242, 169, 59, 0.4);
+}
+.marquee-nav-btn.left {
+  left: 0;
+}
+.marquee-nav-btn.right {
+  right: 0;
+}
+.marquee-nav-btn svg {
+  width: 20px;
+  height: 20px;
 }
 
 .marquee-set {
@@ -925,33 +966,22 @@ a.marquee-card {
   color: var(--text);
 }
 
-@keyframes scrollMarquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-/* Reduced motion for marquee */
+/* Reduced motion for marquee fallback */
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track {
-    animation: none;
+  .marquee-container {
     overflow-x: auto;
-    width: 100%;
     scrollbar-width: thin;
     scrollbar-color: var(--amber) var(--navy-900);
   }
-  .marquee-track::-webkit-scrollbar {
+  .marquee-container::-webkit-scrollbar {
     height: 6px;
   }
-  .marquee-track::-webkit-scrollbar-track {
+  .marquee-container::-webkit-scrollbar-track {
     background: var(--navy-900);
   }
-  .marquee-track::-webkit-scrollbar-thumb {
+  .marquee-container::-webkit-scrollbar-thumb {
     background: var(--amber);
     border-radius: 4px;
-  }
-  .marquee-set:nth-child(2) {
-    display: none;
   }
 }
 

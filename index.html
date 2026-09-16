@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Electrical Engineering Portfolio — Control Systems, Embedded Design &amp; Autonomous Robotics</title>
   <meta name="description" content="Electrical engineering undergraduate portfolio specializing in real-time control systems, embedded C/C++ firmware, autonomous robotics, industrial IoT, and signal conditioning. Proven track record in IEEE competitions and national-level robotics finals.">
-  <link rel="stylesheet" href="index.css?v=2">
+  <link rel="stylesheet" href="index.css?v=3">
 </head>
 <body>
 
@@ -219,6 +219,24 @@
           </div>
         </div>
 
+        <!-- 6. ALII Project -->
+        <div class="project-card" tabindex="0">
+          <h3><svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>The ALII Project — Logic in Motion</h3>
+          <p class="project-desc">Digital logic simulation and hardware implementation featuring a 555 Timer for precise synchronous clock generation, state management via D-Flip Flops and Multiplexers, and rigorous pre-testing to eliminate race conditions before breadboard deployment.</p>
+          <div class="project-tags">
+            <span class="tag">555 Timer</span>
+            <span class="tag">Digital Logic</span>
+            <span class="tag">D-Flip Flops</span>
+            <span class="tag">Simulation</span>
+            <span class="tag">Multiplexers</span>
+          </div>
+          <div class="project-meta">
+            <span>2024</span>
+            <span>·</span>
+            <span>Digital Electronics</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -327,12 +345,16 @@
   <section id="achievements">
     <div class="wrap">
       <h2><span class="section-ref">05</span>Achievements</h2>
-      <div class="marquee-container" id="achievement-marquee">
-        <div class="marquee-track">
-          <!-- Set 1 -->
+      <div class="marquee-wrapper">
+        <button class="marquee-nav-btn left" id="marquee-left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="marquee-container" id="achievement-marquee">
+          <div class="marquee-track" id="marquee-track">
+            <!-- Set 1 -->
           <div class="marquee-set">
             <a href="projects/rice-saver.html" class="marquee-card" data-project="rice-saver">
-              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-image-placeholder"><img src="projects/images/arduino-ieee.jpg" alt="IEEE Arduino Challenge"></div>
               <div class="marquee-content">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
                 <div class="marquee-text">IEEE Arduino Challenge — Top 10</div>
@@ -346,7 +368,7 @@
               </div>
             </a>
             <a href="projects/algabot.html" class="marquee-card" data-project="algabot">
-              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+              <div class="marquee-image-placeholder"><img src="projects/images/achievement.jpg" alt="Achievement Thumbnail"></div>
               <div class="marquee-content">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v2M15 3v2M3 8h18M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><circle cx="12" cy="15" r="4"/></svg>
                 <div class="marquee-text">Alga-Bot Photobioreactor Demo</div>
@@ -371,56 +393,21 @@
               <div class="marquee-content">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <div class="marquee-text">ROBOFEST 2025 — Finalist</div>
+              </div>
+            </a>
+            <a href="projects/alii.html" class="marquee-card" data-project="alii">
+              <div class="marquee-image-placeholder"><img src="projects/images/alii-front.jpg" alt="The ALII Project"></div>
+              <div class="marquee-content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <div class="marquee-text">The ALII Project</div>
               </div>
             </a>
           </div>
-          
-          <!-- Set 2 (for seamless looping) -->
-          <div class="marquee-set">
-            <a href="projects/rice-saver.html" class="marquee-card" data-project="rice-saver">
-              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-              <div class="marquee-content">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-                <div class="marquee-text">IEEE Arduino Challenge — Top 10</div>
-              </div>
-            </a>
-            <a href="projects/perabots.html" class="marquee-card" data-project="perabots">
-              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-              <div class="marquee-content">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                <div class="marquee-text">PeraBots 25 — National Finalist</div>
-              </div>
-            </a>
-            <a href="projects/algabot.html" class="marquee-card" data-project="algabot">
-              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-              <div class="marquee-content">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v2M15 3v2M3 8h18M5 5h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><circle cx="12" cy="15" r="4"/></svg>
-                <div class="marquee-text">Alga-Bot Photobioreactor Demo</div>
-              </div>
-            </a>
-            <a href="projects/iot-lock.html" class="marquee-card" data-project="iot-lock">
-              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-              <div class="marquee-content">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                <div class="marquee-text">IoT Bicycle Lock — Field Test</div>
-              </div>
-            </a>
-            <a href="projects/racing-engine.html" class="marquee-card" data-project="racing-engine">
-              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-              <div class="marquee-content">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                <div class="marquee-text">Python Racing Engine Demo</div>
-              </div>
-            </a>
-            <a href="projects/raven.html" class="marquee-card" data-project="raven">
-              <div class="marquee-image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-              <div class="marquee-content">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <div class="marquee-text">ROBOFEST 2025 — Finalist</div>
-              </div>
-            </a>
           </div>
         </div>
+        <button class="marquee-nav-btn right" id="marquee-right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
       </div>
     </div>
   </section>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alga-Bot Photobioreactor — Project Detail</title>
-  <meta name="description" content="End-to-end industrial control system — custom signal conditioning, LabVIEW DAQ integration, and dual-spectrum LED control loops for intelligent algae cultivation.">
+  <title>The ALII Project — Logic in Motion</title>
+  <meta name="description" content="Digital logic simulation and hardware implementation featuring a 555 Timer, D-Flip Flops, and Multiplexers.">
   <link rel="stylesheet" href="../index.css">
   <link rel="stylesheet" href="../project-detail.css">
 </head>
@@ -39,10 +39,13 @@
 
     <!-- Hero Banner -->
     <div class="project-hero">
-      <img src="images/algabot/1.jpg" alt="Alga-Bot Hero Image" class="project-hero-image">
+      <div class="project-hero-image-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Project hero image — drop your image here</span>
+      </div>
       <div class="project-hero-overlay">
-        <div class="project-category">Industrial Control System</div>
-        <h1>Alga-Bot — Intelligent Photobioreactor</h1>
+        <div class="project-category">Digital Logic & Simulation</div>
+        <h1>The ALII Project — Logic in Motion</h1>
       </div>
     </div>
 
@@ -56,17 +59,17 @@
       <div class="meta-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
         <span class="meta-label">Category</span>
-        <span class="meta-value">Control Systems &amp; Signal Conditioning</span>
+        <span class="meta-value">Digital Logic Design</span>
       </div>
       <div class="meta-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <span class="meta-label">Duration</span>
-        <span class="meta-value">4 Months</span>
+        <span class="meta-value">3 Months</span>
       </div>
       <div class="meta-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         <span class="meta-label">Team</span>
-        <span class="meta-value">3 Members</span>
+        <span class="meta-value">Team Project</span>
       </div>
     </div>
 
@@ -77,29 +80,15 @@
       <div class="project-description">
         <h2>Project Overview</h2>
         <p>
-          The Alga-Bot is a fully automated photobioreactor designed from the ground up as an end-to-end industrial control system. It monitors and regulates the environmental conditions necessary for optimal microalgae cultivation — light intensity, temperature, pH, and nutrient flow — through a closed-loop feedback architecture.
-        </p>
-        <p>
-          This project demonstrates real-world control engineering principles applied to a biological system: signal conditioning, DAQ integration, PID-based regulation, and multi-variable process control.
+          The ALII project demonstrates our rigorous problem-solving process in digital electronics. While the physical product showcases our craftsmanship, the virtual simulations represent the "brain" of the operation. This project highlighted the vital importance of simulation-driven design, bridging the gap between virtual waveforms and physical hardware output.
         </p>
 
         <h2>Technical Details</h2>
         <ul>
-          <li>Custom signal conditioning circuit using LM358 op-amps for LDR voltage dividers, achieving precise light-intensity measurement with noise-filtered analog output</li>
-          <li>LabVIEW-based Data Acquisition (DAQ) system for real-time environmental monitoring — sampling at 10 Hz across 4 analog channels simultaneously</li>
-          <li>Dual-spectrum LED control loops (red 630nm + blue 460nm) with independent PWM regulation for photosynthetically active radiation (PAR) optimization</li>
-          <li>Closed-loop temperature control using NTC thermistor feedback with hysteresis deadband to prevent relay chatter</li>
-          <li>pH monitoring subsystem with buffered electrode interface and software-based calibration routine</li>
-          <li>Custom PCB layout for the analog front-end, designed in KiCad with proper ground plane partitioning</li>
+          <li><strong>Precision Timing:</strong> Integrated a 555 Timer circuit to generate a stable clock pulse for synchronous operation.</li>
+          <li><strong>Logic Validation:</strong> Used D-Flip Flops and Multiplexers to manage state transitions and ensure clean data flow to the 7-segment displays.</li>
+          <li><strong>Error Mitigation:</strong> Pre-testing the gate logic in a virtual environment eliminated race conditions before moving to the breadboard.</li>
         </ul>
-
-        <h2>Challenges &amp; Solutions</h2>
-        <p>
-          The primary challenge was achieving stable analog readings in an electrically noisy environment. The aquarium pumps and LED drivers introduced significant EMI. This was resolved through careful analog front-end design — shielded cables, decoupling capacitors at every op-amp supply pin, and a dedicated analog ground plane separated from the digital ground.
-        </p>
-        <p>
-          Another challenge was the non-linear response of the LDR sensors. A lookup table with linear interpolation was implemented in the LabVIEW VI to linearize the sensor output across the operating range.
-        </p>
       </div>
 
       <!-- Right: Sidebar -->
@@ -109,28 +98,21 @@
         <div class="sidebar-panel">
           <h3>Tech Stack</h3>
           <div class="sidebar-tags">
-            <span class="tag">LabVIEW</span>
-            <span class="tag">LM358 Op-Amp</span>
-            <span class="tag">DAQ</span>
-            <span class="tag">PWM</span>
-            <span class="tag">KiCad</span>
-            <span class="tag">PID Control</span>
-            <span class="tag">Signal Conditioning</span>
-            <span class="tag">NTC Thermistor</span>
+            <span class="tag">555 Timer</span>
+            <span class="tag">D-Flip Flops</span>
+            <span class="tag">Multiplexers</span>
+            <span class="tag">7-Segment Displays</span>
+            <span class="tag">Digital Logic</span>
+            <span class="tag">Simulation</span>
           </div>
         </div>
 
         <!-- Links -->
         <div class="sidebar-panel">
           <h3>Links</h3>
-          <a href="#" class="project-link" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            GitHub Repository
-            <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
-          </a>
-          <a href="#" class="project-link" target="_blank" rel="noopener">
+          <a href="https://lnkd.in/gqMX8cPa" class="project-link" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Live Demo / Documentation
+            See Hardware in Action
             <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
         </div>
@@ -140,7 +122,7 @@
           <h3>Status</h3>
           <div style="display: flex; align-items: center; gap: 8px;">
             <span style="width: 8px; height: 8px; border-radius: 50%; background: #34d399; box-shadow: 0 0 8px rgba(52, 211, 153, 0.5);"></span>
-            <span style="font-size: 14px; color: var(--text-muted);">Completed — Demo Ready</span>
+            <span style="font-size: 14px; color: var(--text-muted);">Completed</span>
           </div>
         </div>
 
@@ -152,20 +134,32 @@
       <h2>Gallery</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="images/algabot/2.jpg" alt="Circuit Board Assembly">
-          <div class="gallery-caption">Circuit Board Assembly</div>
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image 1</span>
+          </div>
+          <div class="gallery-caption">Project Image 1</div>
         </div>
         <div class="gallery-item">
-          <img src="images/algabot/3.jpg" alt="LabVIEW Dashboard">
-          <div class="gallery-caption">LabVIEW Dashboard</div>
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image 2</span>
+          </div>
+          <div class="gallery-caption">Project Image 2</div>
         </div>
         <div class="gallery-item">
-          <img src="images/algabot/4.jpg" alt="Full System Setup">
-          <div class="gallery-caption">Full System Setup</div>
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image 3</span>
+          </div>
+          <div class="gallery-caption">Project Image 3</div>
         </div>
         <div class="gallery-item">
-          <img src="images/algabot/5.jpg" alt="Signal Conditioning PCB">
-          <div class="gallery-caption">Signal Conditioning PCB</div>
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image 4</span>
+          </div>
+          <div class="gallery-caption">Project Image 4</div>
         </div>
       </div>
     </div>
